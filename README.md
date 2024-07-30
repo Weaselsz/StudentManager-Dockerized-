@@ -8,7 +8,7 @@ My FullStack Project in Dockerized form, to use as private host without greater 
 Pull the docker-compose yaml-file to IDE
 
 #### Step 2:
-Install or Open Docker or Docker-Desktop(Windows)
+Install/Open Docker or Docker-Desktop(Windows)
 
 #### Step 3:
 Execute Yaml-File with following commands in Docker-CLI: 
