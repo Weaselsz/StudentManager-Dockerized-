@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  vue-frontend:
+    image: dockerconsti/vue-frontend:v1
+    ports:
+      - "80:80"
+    depends_on:
+      - spring-app
+    
+
+  spring-app:
+    image: dockerconsti/spring-app:v1
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://data:5432/student
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1234 
+    ports:
+      - "8090:8080"  
+    depends_on:
+      - data
+
+  data:
+    image: dockerconsti/backend-data:1.0
+    environment:
+      POSTGRES_DB: student
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234  
+    ports:
+      - "5432:5432"  
