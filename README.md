@@ -11,10 +11,15 @@ Pull the docker-compose yaml-file to IDE
 Install/Open Docker or Docker-Desktop(Windows)
 
 #### Step 3:
-Execute Yaml-File with following commands in Docker-CLI: 
+Execute Yaml-File with following command order in Docker-CLI: 
  
 - cd path/to/the/yml-file
 - docker-compose pull
 - docker-compose up -d
+
+#### Step 4:
+
+Connect to Frontend Server with local entry point 
+->  "http://localhost:8080"
     
     
